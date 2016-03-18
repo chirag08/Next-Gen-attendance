@@ -4,7 +4,7 @@
 	</div>
 	<div class="col l6 card-panel">
 		<h4 class="center">Register New Student</h4>
-		<%= form_for(@student, :html=>{:autocomplete=>'on'}) do |f|  %>
+		<%= form_for(@student, :html=>{:autocomplete=>'on',multipart: true}) do |f|  %>
 			<div class="input-field">
 				<i class="material-icons prefix">account_circle</i>
 				<%= f.label :name %>
@@ -22,12 +22,12 @@
 			</div>
 			<div class="file-field input-field">
 				<i class="material-icons prefix">add_a_photo</i>
-		       <input type="file">
+		       <%= f.file_field :photo %>
 		      <div class="file-path-wrapper">
-		        <input class="file-path validate" type="text" placeholder="Upload Image">
+		        <input class="file-path validate" type="text">
 		      </div>
 		    </div>
-		    <%= f.submit "Register" ,class: "waves-effect waves-light btn" %>
+		    <div class="center"><%= f.submit "Register" ,class: "waves-effect waves-light btn" %></div> <br> </br>
 		<% end %>	
 	</div>
 </div>

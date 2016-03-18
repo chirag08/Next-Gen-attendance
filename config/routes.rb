@@ -1,8 +1,12 @@
 Rails.application.routes.draw do
+  post "headshot/capture" => 'headshot#capture', :as => :headshot_capture
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
   root 'static_pages#home'
   resources :students
+
+   get 'new/attendance' => 'attendances#attendance'
+   get 'show/atendance/:id' => 'attendances#show'
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
 

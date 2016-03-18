@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: chirag08
+  api_key: '719121696559658'
+  api_secret: _2NbEfcpk1XmwC-rE1n8_ENhXMs
+  enhance_image_tag: true
+  static_image_support: false
+production:
+  cloud_name: chirag08
+  api_key: '719121696559658'
+  api_secret: _2NbEfcpk1XmwC-rE1n8_ENhXMs
+  enhance_image_tag: true
+  static_image_support: true
+test:
+  cloud_name: chirag08
+  api_key: '719121696559658'
+  api_secret: _2NbEfcpk1XmwC-rE1n8_ENhXMs
+  enhance_image_tag: true
+  static_image_support: false

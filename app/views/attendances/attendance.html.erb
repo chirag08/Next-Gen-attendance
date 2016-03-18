@@ -1,0 +1,20 @@
+<%= headshot_default_config(Rails.application.config.session_options[:key], headshot_capture_path,:on_complete => "customCameraHooks.onComplete") %>
+
+<div class="card-panel">
+	<%= headshot_camera %>
+</div> 
+
+<br/><br/>
+
+<%= headshot_snap_button('Capture Attendance',{
+	class: "btn-large waves-effect waves-light blue"
+	}) %>
+<script language="JavaScript"> 
+	var customCameraHooks = {
+		onComplete: function(response) {
+			console.log("Server responded: " + response);
+			console.log(response);
+			headshot.reset();
+		}
+	};
+</script>

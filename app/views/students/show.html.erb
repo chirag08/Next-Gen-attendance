@@ -1,0 +1,15 @@
+
+<div class="row">
+	<div class="col l4 left">
+			<%= image_tag @student.photo.url %>
+			<%=  @student.photo.url %>
+			<%= flash[:notice] %>
+			<%#= image_tag @student.photo.url(:medium) %>
+			<%#= image_tag @student.photo.url(:thumb) %>
+				<div class="right">
+					<h4 class="green-text text-accent-3"><%= @student.name %> </h4><br>
+					<h4>Roll number =></h4> <h3 class="green-text text-accent-3"><%= @student.roll_num %></h4>
+				</div>
+				<%= @result %>
+	</div>	
+</div>
