@@ -1,0 +1,33 @@
+<div class="row">
+	<div class="col l6">
+		<h2>Yoo</h2>
+	</div>
+	<div class="col l6 card-panel">
+		<h4 class="center">Register New Student</h4>
+		<%= form_for(@student, :html=>{:autocomplete=>'on'}) do |f|  %>
+			<div class="input-field">
+				<i class="material-icons prefix">account_circle</i>
+				<%= f.label :name %>
+				<%= f.text_field :name %>
+			</div>
+			<div class="input-field">
+				<i class="material-icons prefix">label_outline</i>
+				<%= f.label :roll_num %>
+				<%= f.text_field :roll_num %>
+			</div>
+			<div class="input-field">
+				<i class="material-icons prefix">label_outline</i>
+				<%= f.label :class_name %>
+				<%= f.text_field :class_name %>
+			</div>
+			<div class="file-field input-field">
+				<i class="material-icons prefix">add_a_photo</i>
+		       <input type="file">
+		      <div class="file-path-wrapper">
+		        <input class="file-path validate" type="text" placeholder="Upload Image">
+		      </div>
+		    </div>
+		    <%= f.submit "Register" ,class: "waves-effect waves-light btn" %>
+		<% end %>	
+	</div>
+</div>
